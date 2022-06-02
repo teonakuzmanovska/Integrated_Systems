@@ -22,7 +22,9 @@ namespace is_aud1.Controllers
         // GET: Products
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Products.ToListAsync());
+            var model = _context.Products.Where(z => z.ProductRating > 3).ToList();
+            //var model = _context.Products.FirstOrDefault(z => z.ProductRating > 5); // returns only one
+            return View(model);
         }
 
         // GET: Products/Details/5
