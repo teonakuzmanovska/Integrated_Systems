@@ -17,5 +17,6 @@ namespace is_aud1.Models
         public string ProductDescription { get; set; }
         public int ProductPrice { get; set; }
         public int ProductRating { get; set; }
+        public ICollection<ProductsInShoppingCart> ProductsInShoppingCarts { get; set; }
     }
 }
