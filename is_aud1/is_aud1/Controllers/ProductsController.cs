@@ -27,6 +27,21 @@ namespace is_aud1.Controllers
             return View(model);
         }
 
+        public async Task<IActionResult> AddToCart(int productId, int cartId)
+        {
+            var product = await _context.Products.Where(z => z.ProductId == productId).FirstOrDefaultAsync();
+            var cart = _context.ShoppingCarts.Where(z => z.CartId == cartId).FirstOrDefault();
+
+            var productInShoppingCart = new ProductsInShoppingCart();
+            productInShoppingCart.CartId = cart.CartId;
+            productInShoppingCart.ProductId = product.ProductId;
+
+            _context.ProductsInShoppingCarts.Add(productInShoppingCart);
+            _context.SaveChanges();
+
+            return View(product);
+        }
+
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
