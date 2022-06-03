@@ -1,10 +1,11 @@
-﻿using System;
+﻿using EShop.Domain.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace is_aud1.Models
+namespace EShop.Domain.DomainModels
 {
     public class Order
     {

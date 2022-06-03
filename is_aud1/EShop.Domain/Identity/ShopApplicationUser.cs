@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using EShop.Domain.DomainModels;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace is_aud1.Models
+namespace EShop.Domain.Identity
 {
     // inherits from IdentityUser
     public class ShopApplicationUser : IdentityUser

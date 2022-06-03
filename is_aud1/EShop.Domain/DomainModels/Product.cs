@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace is_aud1.Models
+namespace EShop.Domain.DomainModels
 {
     public class Product
     {
