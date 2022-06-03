@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using is_aud1.Data;
 using is_aud1.Models;
+using System.Security.Claims;
 
 namespace is_aud1.Controllers
 {
@@ -27,19 +28,49 @@ namespace is_aud1.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> AddToCart(int productId, int cartId)
+        public async Task<IActionResult> AddToCart(int productId)
         {
             var product = await _context.Products.Where(z => z.ProductId == productId).FirstOrDefaultAsync();
-            var cart = _context.ShoppingCarts.Where(z => z.CartId == cartId).FirstOrDefault();
+            var model = new AddToShoppingCartDto();
+            
+            model.SelectedProduct = product;
+            model.ProductId = product.ProductId;
+            model.Quantity = 0;
 
-            var productInShoppingCart = new ProductsInShoppingCart();
-            productInShoppingCart.CartId = cart.CartId;
-            productInShoppingCart.ProductId = product.ProductId;
+            return View(model);
+        }
 
-            _context.ProductsInShoppingCarts.Add(productInShoppingCart);
-            _context.SaveChanges();
+        [HttpPost] // because we pass the whole object as parameter
+        public async Task<IActionResult> AddToShoppingCart(AddToShoppingCartDto model)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            return View(product);
+            var user = _context.Users.Where(z => z.Id == userId)
+                .Include("UserShoppingCart.ProductsInShoppingCarts")
+                .Include("UserShoppingCart.ProductsInShoppingCarts.Product")
+                .FirstOrDefault();
+
+            var userShoppingCart = user.UserShoppingCart;
+
+            if (userShoppingCart != null)
+            {
+                var product = _context.Products.Find(model.ProductId);
+
+                if (product != null)
+                {
+                    ProductsInShoppingCart itemToAdd = new ProductsInShoppingCart
+                    {
+                        Product = product,
+                        ProductId = product.ProductId,
+                        ShoppingCart = userShoppingCart,
+                        Quantity = model.Quantity
+                    };
+                    _context.Add(itemToAdd);
+                    await _context.SaveChangesAsync();
+                }
+            }
+
+            return RedirectToAction("Index");
         }
 
         // GET: Products/Details/5
