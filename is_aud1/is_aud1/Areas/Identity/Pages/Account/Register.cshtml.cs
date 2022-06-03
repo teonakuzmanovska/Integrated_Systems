@@ -52,6 +52,18 @@ namespace is_aud1.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
+            [Display(Name = "Name")]
+            public string Name { get; set; }
+
+            [Required]
+            [Display(Name = "Surname")]
+            public string Surname { get; set; }
+
+            [Required]
+            [Display(Name = "Address")]
+            public string Address { get; set; }
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -75,7 +87,15 @@ namespace is_aud1.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ShopApplicationUser { UserName = Input.Email, Email = Input.Email };
+                var user = new ShopApplicationUser { UserName = Input.Email, Email = Input.Email,
+                    Name = Input.Name,
+                    Surname = Input.Surname,
+                    Address = Input.Address,
+                    UserShoppingCart = new ShoppingCart()
+                };
+
+                user.UserShoppingCart.ApplictaionUserId = user.Id;
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
