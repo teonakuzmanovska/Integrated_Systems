@@ -9,16 +9,19 @@ namespace is_aud1.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ShopApplicationUser>
     {
-        public DbSet<Product> Products { get; set; }
-        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
-        public DbSet<ProductsInShoppingCart> ProductsInShoppingCarts { get; set; }
-        public DbSet<ShopApplicationUser> ShopApplicationUsers { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public virtual DbSet<ProductsInShoppingCart> ProductsInShoppingCarts { get; set; }
+        public virtual DbSet<ShopApplicationUser> ShopApplicationUsers { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<ProductsInOrder> ProductsInOrders { get; set; }
 
         // this is in order to obtain composite key for ProductsInShoppingCarts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
             builder.Entity<ProductsInShoppingCart>().HasKey(c => new { c.CartId, c.ProductId });
+            builder.Entity<ProductsInOrder>().HasKey(c => new { c.OrderId, c.ProductId });
         }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
