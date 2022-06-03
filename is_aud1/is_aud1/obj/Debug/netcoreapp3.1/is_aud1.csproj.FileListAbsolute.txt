@@ -173,3 +173,4 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.pdb
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.genruntimeconfig.cache
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\Index.cshtml.g.cs
