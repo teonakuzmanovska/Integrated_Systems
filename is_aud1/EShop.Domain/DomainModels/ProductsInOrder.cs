@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EShop.Domain.DomainModels
 {
-    public class ProductsInOrder
+    public class ProductsInOrder : BaseEntity
     {
         // join table - many to many relationship between products and orders
 

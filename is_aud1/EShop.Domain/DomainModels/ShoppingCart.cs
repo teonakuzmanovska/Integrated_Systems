@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace EShop.Domain.DomainModels
 {
-    public class ShoppingCart
+    public class ShoppingCart : BaseEntity
     {
-        [Key]
-        public int CartId { get; set; }
         public string ApplictaionUserId { get; set; }
         public ICollection<ProductsInShoppingCart> ProductsInShoppingCarts { get; set; }
     }

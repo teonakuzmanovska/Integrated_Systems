@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EShop.Domain.DomainModels
 {
-    public class ProductsInShoppingCart
+    public class ProductsInShoppingCart : BaseEntity
     {
         public int ProductId { get; set; }
         public int CartId { get; set; }

@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace EShop.Domain.DomainModels
 {
-    public class Order
+    public class Order : BaseEntity
     {
-        [Key]
-        public int OrderId { get; set; }
-
         public string UserId { get; set; }
 
         //for 1:M relationship

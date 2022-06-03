@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace EShop.Domain.DomainModels
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        [Key]
-        public int ProductId { get; set; }
         [Required]
         [Display(Name = "Ime na produkt")]
         public string ProductName { get; set; }
