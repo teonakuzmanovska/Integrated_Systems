@@ -7,11 +7,12 @@ using System.Text;
 
 namespace is_aud1.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ShopApplicationUser>
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<ProductsInShoppingCart> ProductsInShoppingCarts { get; set; }
+        public DbSet<ShopApplicationUser> ShopApplicationUsers { get; set; }
 
         // this is in order to obtain composite key for ProductsInShoppingCarts
         protected override void OnModelCreating(ModelBuilder builder)
