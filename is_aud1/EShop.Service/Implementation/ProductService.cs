@@ -27,7 +27,7 @@ namespace EShop.Service.Implementation
             this._productRepository.Insert(p);
         }
 
-        public void DeleteProdcut(int id)
+        public void DeleteProduct(int id)
         {
             var product = _productRepository.Get(id);
             this._productRepository.Delete(product);

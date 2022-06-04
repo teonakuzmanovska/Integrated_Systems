@@ -13,7 +13,7 @@ namespace EShop.Service.Interface
         void CreateNewProduct(Product p);
         void UpdateExistingProduct(Product p);
         ShoppingCartDto GetShoppingCartInfo(int id);
-        void DeleteProdcut(int id);
+        void DeleteProduct(int id);
         bool AddToShoppingCart(ShoppingCartDto item, string userId);
 
     }

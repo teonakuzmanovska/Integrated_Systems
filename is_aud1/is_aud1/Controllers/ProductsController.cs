@@ -5,36 +5,35 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using is_aud1.Data;
-using is_aud1.Models;
 using System.Security.Claims;
+using EShop.Service.Interface;
+using EShop.Domain.DTO;
+using EShop.Domain.DomainModels;
 
 namespace is_aud1.Controllers
 {
     public class ProductsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IProductService _productService;
 
-        public ProductsController(ApplicationDbContext context)
+        public ProductsController(IProductService _productService)
         {
-            _context = context;
+            _productService = _productService;
         }
 
         // GET: Products
         public async Task<IActionResult> Index()
         {
-            var model = _context.Products.Where(z => z.ProductRating > 3).ToList();
-            //var model = _context.Products.FirstOrDefault(z => z.ProductRating > 5); // returns only one
-            return View(model);
+            return View(_productService.GetAllProducts());
         }
 
         public async Task<IActionResult> AddToCart(int productId)
         {
-            var product = await _context.Products.Where(z => z.ProductId == productId).FirstOrDefaultAsync();
+            var product = _productService.GetDetailsForProduct(productId);
             var model = new AddToShoppingCartDto();
             
             model.SelectedProduct = product;
-            model.ProductId = product.ProductId;
+            model.ProductId = product.Id;
             model.Quantity = 0;
 
             return View(model);
@@ -43,32 +42,32 @@ namespace is_aud1.Controllers
         [HttpPost] // because we pass the whole object as parameter
         public async Task<IActionResult> AddToShoppingCart(AddToShoppingCartDto model)
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var user = _context.Users.Where(z => z.Id == userId)
-                .Include("UserShoppingCart.ProductsInShoppingCarts")
-                .Include("UserShoppingCart.ProductsInShoppingCarts.Product")
-                .FirstOrDefault();
+            //var user = _context.Users.Where(z => z.Id == userId)
+            //    .Include("UserShoppingCart.ProductsInShoppingCarts")
+            //    .Include("UserShoppingCart.ProductsInShoppingCarts.Product")
+            //    .FirstOrDefault();
 
-            var userShoppingCart = user.UserShoppingCart;
+            //var userShoppingCart = user.UserShoppingCart;
 
-            if (userShoppingCart != null)
-            {
-                var product = _context.Products.Find(model.ProductId);
+            //if (userShoppingCart != null)
+            //{
+            //    var product = _context.Products.Find(model.ProductId);
 
-                if (product != null)
-                {
-                    ProductsInShoppingCart itemToAdd = new ProductsInShoppingCart
-                    {
-                        Product = product,
-                        ProductId = product.ProductId,
-                        ShoppingCart = userShoppingCart,
-                        Quantity = model.Quantity
-                    };
-                    _context.Add(itemToAdd);
-                    await _context.SaveChangesAsync();
-                }
-            }
+            //    if (product != null)
+            //    {
+            //        ProductsInShoppingCart itemToAdd = new ProductsInShoppingCart
+            //        {
+            //            Product = product,
+            //            ProductId = product.ProductId,
+            //            ShoppingCart = userShoppingCart,
+            //            Quantity = model.Quantity
+            //        };
+            //        _context.Add(itemToAdd);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //}
 
             return RedirectToAction("Index");
         }
@@ -81,8 +80,7 @@ namespace is_aud1.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.ProductId == id);
+            var product = _productService.GetDetailsForProduct(id??0);
             if (product == null)
             {
                 return NotFound();
@@ -102,12 +100,11 @@ namespace is_aud1.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductImage,ProductDescription,ProductPrice,ProductRating")] Product product)
+        public async Task<IActionResult> Create(Product product)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
+                _productService.CreateNewProduct(product);
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
@@ -121,7 +118,7 @@ namespace is_aud1.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products.FindAsync(id);
+            var product = _productService.GetDetailsForProduct(id??0);
             if (product == null)
             {
                 return NotFound();
@@ -134,9 +131,9 @@ namespace is_aud1.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductImage,ProductDescription,ProductPrice,ProductRating")] Product product)
+        public async Task<IActionResult> Edit(int id, Product product)
         {
-            if (id != product.ProductId)
+            if (id != product.Id)
             {
                 return NotFound();
             }
@@ -145,12 +142,11 @@ namespace is_aud1.Controllers
             {
                 try
                 {
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
+                    _productService.UpdateExistingProduct(product);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductExists(product.ProductId))
+                    if (!ProductExists(product.Id))
                     {
                         return NotFound();
                     }
@@ -172,8 +168,7 @@ namespace is_aud1.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.ProductId == id);
+            var product = _productService.GetDetailsForProduct(id??0);
             if (product == null)
             {
                 return NotFound();
@@ -187,15 +182,13 @@ namespace is_aud1.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await _context.Products.FindAsync(id);
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
+            _productService.DeleteProduct(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProductExists(int id)
         {
-            return _context.Products.Any(e => e.ProductId == id);
+            return _productService.GetDetailsForProduct(id) != null;
         }
     }
 }
