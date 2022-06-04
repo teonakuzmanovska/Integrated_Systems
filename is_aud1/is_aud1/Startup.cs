@@ -1,5 +1,9 @@
-using is_aud1.Data;
-using is_aud1.Models;
+using EShop.Domain.Identity;
+using EShop.Repository;
+using EShop.Repository.Implementation;
+using EShop.Repository.Interface;
+using EShop.Service.Implementation;
+using EShop.Service.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,6 +37,13 @@ namespace is_aud1
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<ShopApplicationUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            // whenever a controller or class in solution
+            // asks for repository or service inside their constructor,
+            // this will provide it to the constructor
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<IProductService, ProductService>();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

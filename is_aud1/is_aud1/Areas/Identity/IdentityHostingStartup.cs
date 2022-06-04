@@ -1,6 +1,4 @@
 ﻿using System;
-using is_aud1.Data;
-using is_aud1.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;

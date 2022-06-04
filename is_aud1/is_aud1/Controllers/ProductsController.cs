@@ -9,6 +9,7 @@ using System.Security.Claims;
 using EShop.Service.Interface;
 using EShop.Domain.DTO;
 using EShop.Domain.DomainModels;
+using EShop.Repository;
 
 namespace is_aud1.Controllers
 {
@@ -16,9 +17,9 @@ namespace is_aud1.Controllers
     {
         private readonly IProductService _productService;
 
-        public ProductsController(IProductService _productService)
+        public ProductsController(IProductService productService)
         {
-            _productService = _productService;
+            _productService = productService;
         }
 
         // GET: Products

@@ -2710,6 +2710,50 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "EShop.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.25",
+          "Microsoft.EntityFrameworkCore": "3.1.25",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.25"
+        },
+        "compile": {
+          "bin/placeholder/EShop.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EShop.Domain.dll": {}
+        }
+      },
+      "EShop.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "EShop.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.25",
+          "Microsoft.EntityFrameworkCore": "3.1.25"
+        },
+        "compile": {
+          "bin/placeholder/EShop.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EShop.Repository.dll": {}
+        }
+      },
+      "EShop.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "EShop.Domain": "1.0.0",
+          "EShop.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EShop.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EShop.Service.dll": {}
+        }
       }
     }
   },
@@ -8829,10 +8873,28 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "EShop.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EShop.Domain/EShop.Domain.csproj",
+      "msbuildProject": "../EShop.Domain/EShop.Domain.csproj"
+    },
+    "EShop.Repository/1.0.0": {
+      "type": "project",
+      "path": "../EShop.Repository/EShop.Repository.csproj",
+      "msbuildProject": "../EShop.Repository/EShop.Repository.csproj"
+    },
+    "EShop.Service/1.0.0": {
+      "type": "project",
+      "path": "../EShop.Service/EShop.Service.csproj",
+      "msbuildProject": "../EShop.Service/EShop.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "EShop.Domain >= 1.0.0",
+      "EShop.Repository >= 1.0.0",
+      "EShop.Service >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.22",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.25",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.25",
@@ -8867,7 +8929,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Lenovo\\Documents\\GitHub\\Integrated_Systems\\is_aud1\\EShop.Domain\\EShop.Domain.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Documents\\GitHub\\Integrated_Systems\\is_aud1\\EShop.Domain\\EShop.Domain.csproj"
+            },
+            "C:\\Users\\Lenovo\\Documents\\GitHub\\Integrated_Systems\\is_aud1\\EShop.Repository\\EShop.Repository.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Documents\\GitHub\\Integrated_Systems\\is_aud1\\EShop.Repository\\EShop.Repository.csproj"
+            },
+            "C:\\Users\\Lenovo\\Documents\\GitHub\\Integrated_Systems\\is_aud1\\EShop.Service\\EShop.Service.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Documents\\GitHub\\Integrated_Systems\\is_aud1\\EShop.Service\\EShop.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
