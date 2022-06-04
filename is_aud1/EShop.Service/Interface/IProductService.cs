@@ -14,7 +14,7 @@ namespace EShop.Service.Interface
         void UpdateExistingProduct(Product p);
         ShoppingCartDto GetShoppingCartInfo(int id);
         void DeleteProduct(int id);
-        bool AddToShoppingCart(ShoppingCartDto item, string userId);
+        bool AddToShoppingCart(AddToShoppingCartDto item, string userId);
 
     }
 }

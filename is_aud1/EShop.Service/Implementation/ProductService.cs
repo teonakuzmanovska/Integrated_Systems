@@ -12,14 +12,41 @@ namespace EShop.Service.Implementation
     public class ProductService : IProductService
     {
         public readonly IRepository<Product> _productRepository;
+        public readonly IUserRepository _userRepository;
+        public readonly IRepository<ProductsInShoppingCart> _productsInShoppingCartRepository;
 
-        public ProductService(IRepository<Product> productRepository)
+        public ProductService(IRepository<Product> productRepository, IUserRepository userRepository, IRepository<ProductsInShoppingCart> productsInShoppingCartRepository)
         {
             _productRepository = productRepository;
+            _userRepository = userRepository;
+            _productsInShoppingCartRepository = productsInShoppingCartRepository;
         }
-        public bool AddToShoppingCart(ShoppingCartDto item, string userId)
+        public bool AddToShoppingCart(AddToShoppingCartDto item, string userId)
         {
-            throw new NotImplementedException();
+            var user = _userRepository.Get(userId);
+
+            var userShoppingCart = user.UserShoppingCart;
+
+            if (userShoppingCart != null)
+            {
+                var product = GetDetailsForProduct(item.ProductId);
+
+                if (product != null)
+                {
+                    ProductsInShoppingCart itemToAdd = new ProductsInShoppingCart
+                    {
+                        Product = product,
+                        ProductId = product.Id,
+                        ShoppingCart = userShoppingCart,
+                        Quantity = item.Quantity
+                    };
+                    _productsInShoppingCartRepository.Insert(itemToAdd);
+                    return true;
+                }
+                return false;
+            }
+            return false;
+            
         }
 
         public void CreateNewProduct(Product p)

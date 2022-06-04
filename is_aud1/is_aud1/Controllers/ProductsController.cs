@@ -43,34 +43,15 @@ namespace is_aud1.Controllers
         [HttpPost] // because we pass the whole object as parameter
         public async Task<IActionResult> AddToShoppingCart(AddToShoppingCartDto model)
         {
-            //var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = _productService.AddToShoppingCart(model, userId);
 
-            //var user = _context.Users.Where(z => z.Id == userId)
-            //    .Include("UserShoppingCart.ProductsInShoppingCarts")
-            //    .Include("UserShoppingCart.ProductsInShoppingCarts.Product")
-            //    .FirstOrDefault();
-
-            //var userShoppingCart = user.UserShoppingCart;
-
-            //if (userShoppingCart != null)
-            //{
-            //    var product = _context.Products.Find(model.ProductId);
-
-            //    if (product != null)
-            //    {
-            //        ProductsInShoppingCart itemToAdd = new ProductsInShoppingCart
-            //        {
-            //            Product = product,
-            //            ProductId = product.ProductId,
-            //            ShoppingCart = userShoppingCart,
-            //            Quantity = model.Quantity
-            //        };
-            //        _context.Add(itemToAdd);
-            //        await _context.SaveChangesAsync();
-            //    }
-            //}
-
+            if (result)
+            {
+                return RedirectToAction("Index", "Products");
+            }
             return RedirectToAction("Index");
+
         }
 
         // GET: Products/Details/5

@@ -42,7 +42,12 @@ namespace is_aud1
             // asks for repository or service inside their constructor,
             // this will provide it to the constructor
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+            services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
+
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IShoppingCartService, ShoppingCartService>();
+
 
             services.AddControllersWithViews();
             services.AddRazorPages();
