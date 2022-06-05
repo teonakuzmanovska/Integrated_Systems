@@ -181,3 +181,6 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.Views.pdb
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.genruntimeconfig.cache
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
