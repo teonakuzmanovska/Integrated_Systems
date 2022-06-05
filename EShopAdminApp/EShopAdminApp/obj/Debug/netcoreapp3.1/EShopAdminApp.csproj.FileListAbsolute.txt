@@ -1,3 +1,4 @@
+C:\Users\L
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\EShopAdminApp.StaticWebAssets.xml
@@ -9,6 +10,8 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\EShopAdminApp.pdb
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\EShopAdminApp.Views.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\EShopAdminApp.Views.pdb
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\GemBox.Document.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
@@ -27,9 +30,6 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-C:\Users\L
-C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\GemBox.Document.dll
-C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
@@ -74,7 +74,6 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
-C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\obj\Debug\netcoreapp3.1\EShopAdminApp.csproj.AssemblyReference.cache
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\obj\Debug\netcoreapp3.1\EShopAdminApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\obj\Debug\netcoreapp3.1\EShopAdminApp.AssemblyInfoInputs.cache
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\obj\Debug\netcoreapp3.1\EShopAdminApp.AssemblyInfo.cs

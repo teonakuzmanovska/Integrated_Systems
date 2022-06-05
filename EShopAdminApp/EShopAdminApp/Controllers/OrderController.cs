@@ -68,6 +68,7 @@ namespace EShopAdminApp.Controllers
 
             var result = responseMessage.Content.ReadAsAsync<Order>().Result;
             var directoryPath = Directory.GetCurrentDirectory(); // for debbuging purposes
+            // always do this, not hardcoding
             var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Invoice.docx");
 
             var document = DocumentModel.Load(templatePath);
