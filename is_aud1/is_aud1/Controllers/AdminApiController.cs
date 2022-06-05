@@ -11,11 +11,11 @@ namespace is_aud1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AdminController : ControllerBase
+    public class AdminApiController : ControllerBase
     {
         public readonly IOrderService _orderService;
 
-        public AdminController(IOrderService orderService)
+        public AdminApiController(IOrderService orderService)
         {
             _orderService = orderService;
         }
