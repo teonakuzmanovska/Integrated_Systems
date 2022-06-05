@@ -17,5 +17,6 @@ namespace EShop.Domain.DomainModels
 
         public Product Product { get; set; }
         public Order Order { get; set; }
+        public int Quantity { get; set; }
     }
 }
