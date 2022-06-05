@@ -19,10 +19,15 @@ namespace is_aud1.Controllers
         {
             _orderService = orderService;
         }
-
+        [HttpGet("[action]")]
         public List<Order> GetAllActiveOrders()
         {
             return _orderService.GetAllOrders();
+        }
+        [HttpPost("[action]")]
+        public Order GetOrderDetails(BaseEntity model)
+        {
+            return _orderService.GetOrderDetails(model);
         }
     }
 }
