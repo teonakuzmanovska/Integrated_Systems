@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EBH/VBj8DzGpcMMiknCqnHsWrRK6QraxIFi6xt5rgYcl7XIKEfXR7+kfwgUCEelmBwj1Sj11Coe2/oCYLF2oOg==",
+  "dgSpecHash": "hAP7nu4aNMwQM4mlYNJfg/v4ebJGocNpKy1PQJCqWM6T1VmdXyTAmGmUkZ3yoB+Yq7e0W5zWA4jAL6DgW4YtZw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\Documents\\GitHub\\Integrated_Systems\\EShopAdminApp\\EShopAdminApp\\EShopAdminApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\gembox.document\\35.0.1000\\gembox.document.35.0.1000.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.22\\microsoft.aspnetcore.cryptography.internal.3.1.22.nupkg.sha512",
