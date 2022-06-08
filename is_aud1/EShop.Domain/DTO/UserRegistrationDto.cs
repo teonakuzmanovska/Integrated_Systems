@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EShop.Domain.Identity
+namespace EShop.Domain.DTO
 {
     public class UserRegistrationDto
     {
