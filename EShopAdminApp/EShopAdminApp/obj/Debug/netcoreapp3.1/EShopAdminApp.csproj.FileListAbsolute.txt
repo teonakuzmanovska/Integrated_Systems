@@ -108,3 +108,8 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\obj\Debug\netcoreapp3.1\EShopAdminApp.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\obj\Debug\netcoreapp3.1\EShopAdminApp.pdb
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\obj\Debug\netcoreapp3.1\EShopAdminApp.genruntimeconfig.cache
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\obj\Debug\netcoreapp3.1\EShopAdminApp.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\ClosedXML.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\EShopAdminApp\EShopAdminApp\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
