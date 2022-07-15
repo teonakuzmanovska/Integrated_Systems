@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,9 +56,11 @@ namespace is_aud1
             services.AddScoped<IBackgroundEmailSender, BackgroundEmailSender>();
             services.AddHostedService<EmailScopedHostedService>();
 
-            services.AddTransient<IProductService, ProductService>();
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+
+            services.AddTransient<IProductService, EShop.Service.Implementation.ProductService>();
             services.AddTransient<IShoppingCartService, ShoppingCartService>();
-            services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<IOrderService, EShop.Repository.Implementation.OrderService>();
 
             services.AddControllersWithViews().AddNewtonsoftJson( options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddRazorPages();
@@ -66,6 +69,8 @@ namespace is_aud1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            StripeConfiguration.SetApiKey(Configuration.GetSection("Stripe")["SecretKey"]);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

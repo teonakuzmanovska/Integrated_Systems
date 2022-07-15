@@ -2,6 +2,7 @@
 using EShop.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,13 +37,54 @@ namespace is_aud1.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult OrderNow()
+        public Boolean OrderNow()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            _shoppingCartService.OrderNow(userId);
+            var result = _shoppingCartService.OrderNow(userId);
 
-            return RedirectToAction("Index");
+            return result;
 
+        }
+
+        public IActionResult PayOrder(string stripeEmail, string stripeToken)
+        {
+            var customerService = new CustomerService();
+            var chargeService = new ChargeService();
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var order = this._shoppingCartService.GetShoppingCartInfo(userId); //ovde kje padne !!
+
+            var customer = customerService.Create(new CustomerCreateOptions
+            {
+                Email = stripeEmail,
+                Source = stripeToken
+            });
+
+            var charge = chargeService.Create(new ChargeCreateOptions
+            {
+                Amount = (Convert.ToInt32(order.TotalPrice) * 100),
+                Description = "EShop Application Payment",
+                Currency = "usd",
+                Customer = customer.Id
+            });
+
+            // ne dozvoluvame vnesuvanje u baza i chistenje na cart bez uplata
+
+            if (charge.Status == "succeeded")
+            {
+                var result = this.OrderNow();
+
+                if (result)
+                {
+                    return RedirectToAction("Index", "ShoppingCart");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "ShoppingCart");
+                }
+            }
+
+            return RedirectToAction("Index", "ShoppingCart");
         }
     }
 }

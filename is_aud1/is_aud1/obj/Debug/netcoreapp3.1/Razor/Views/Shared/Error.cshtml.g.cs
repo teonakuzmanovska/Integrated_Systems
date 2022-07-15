@@ -21,8 +21,7 @@ using is_aud1;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\Views\_ViewImports.cshtml"
-using EShop.Domain.DomainModels;
-    using EShop.Domain;
+using EShop.Domain;
 
 #line default
 #line hidden

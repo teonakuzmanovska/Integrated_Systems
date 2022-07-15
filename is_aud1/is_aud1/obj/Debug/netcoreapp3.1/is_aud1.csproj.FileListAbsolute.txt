@@ -108,6 +108,7 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Stripe.net.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
