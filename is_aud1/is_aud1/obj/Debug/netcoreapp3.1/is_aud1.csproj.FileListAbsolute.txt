@@ -49,6 +49,7 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\is_aud1.pdb
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\is_aud1.Views.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\is_aud1.Views.pdb
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\MailKit.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
@@ -56,6 +57,8 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -79,6 +82,7 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
@@ -99,8 +103,11 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\MimeKit.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
@@ -111,6 +118,7 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
@@ -181,6 +189,3 @@ C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\ne
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.Views.pdb
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\obj\Debug\netcoreapp3.1\is_aud1.genruntimeconfig.cache
-C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

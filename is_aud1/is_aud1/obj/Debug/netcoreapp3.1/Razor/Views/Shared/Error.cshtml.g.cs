@@ -12,7 +12,6 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-    using EShop.Domain;
 #nullable restore
 #line 1 "C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\Views\_ViewImports.cshtml"
 using is_aud1;
@@ -23,6 +22,7 @@ using is_aud1;
 #nullable restore
 #line 2 "C:\Users\Lenovo\Documents\GitHub\Integrated_Systems\is_aud1\is_aud1\Views\_ViewImports.cshtml"
 using EShop.Domain.DomainModels;
+    using EShop.Domain;
 
 #line default
 #line hidden

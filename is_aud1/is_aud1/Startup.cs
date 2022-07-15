@@ -1,7 +1,9 @@
+using EShop.Domain;
 using EShop.Domain.Identity;
 using EShop.Repository;
 using EShop.Repository.Implementation;
 using EShop.Repository.Interface;
+using EShop.Service;
 using EShop.Service.Implementation;
 using EShop.Service.Interface;
 using Microsoft.AspNetCore.Builder;
@@ -22,9 +24,12 @@ namespace is_aud1
 {
     public class Startup
     {
+        private EmailSettings emailSettings;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            emailSettings = new EmailSettings();
+            Configuration.GetSection("EmailSettings").Bind(emailSettings); // gi prevzemame konfiguraciite
         }
 
         public IConfiguration Configuration { get; }
@@ -44,6 +49,11 @@ namespace is_aud1
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
             services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
+
+            services.AddScoped(es => emailSettings);
+            services.AddScoped<IEmailService, EmailService>(email => new EmailService(emailSettings));
+            services.AddScoped<IBackgroundEmailSender, BackgroundEmailSender>();
+            services.AddHostedService<EmailScopedHostedService>();
 
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IShoppingCartService, ShoppingCartService>();

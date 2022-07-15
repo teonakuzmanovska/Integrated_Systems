@@ -16,6 +16,7 @@ namespace EShop.Repository
         public virtual DbSet<ShopApplicationUser> ShopApplicationUsers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<ProductsInOrder> ProductsInOrders { get; set; }
+        public virtual DbSet<EmailMessage> EmailMessages { get; set; }
 
         // this is in order to obtain composite key for ProductsInShoppingCarts
         protected override void OnModelCreating(ModelBuilder builder)
