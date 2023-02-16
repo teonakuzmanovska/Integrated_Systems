@@ -32,7 +32,7 @@ namespace EShop.Repository.Implementation
 
         public ShopApplicationUser Get(string id)
         {
-            var user = entities.Include( z => z.UserShoppingCart ).Include("UserShoppingCart.ProductsInShoppingCarts")
+            var user = entities.Where(z => z.Id.Equals(id)).Include( z => z.UserShoppingCart ).Include("UserShoppingCart.ProductsInShoppingCarts")
                 .Include("UserShoppingCart.ProductsInShoppingCarts.Product")
                 .FirstOrDefault();
 
